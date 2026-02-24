@@ -76,6 +76,44 @@ export default function FirstSession() {
             your Claude account.
           </p>
         </Callout>
+
+        <div className="mt-6 border border-[var(--border)] rounded-lg p-5">
+          <p className="font-semibold text-sm mb-2">
+            Optional: Skip permission prompts for a smoother experience
+          </p>
+          <p className="text-sm text-[var(--text-muted)] mb-3">
+            By default, Claude Code will pause and ask for your approval every time it wants
+            to create a file, edit code, or run a command. During this course, that means
+            a lot of confirmation prompts. To skip them and let Claude work uninterrupted,
+            start Claude Code with this flag instead:
+          </p>
+          <CodeBlock command="claude --dangerously-skip-permissions" />
+          <Callout type="warning" title="Understand the risks before using this">
+            <p className="mb-2">
+              This flag tells Claude Code to act without asking you first. That means it can
+              read, create, edit, and delete files — and run terminal commands — without a
+              confirmation step. In a learning environment like this course, that is generally
+              fine. But you should know:
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              <li>Claude could modify or overwrite files without warning</li>
+              <li>Any terminal commands it runs will execute immediately</li>
+              <li>
+                <strong>Never use this flag outside a safe, contained folder</strong> — not
+                on your main project, not on production systems, not anywhere sensitive
+              </li>
+              <li>
+                The course folder on your Desktop is a safe sandbox — nothing here connects
+                to live client data or external systems
+              </li>
+            </ul>
+            <p className="mt-2">
+              If you prefer to stay in control and approve each action, just use{" "}
+              <code className="bg-warm-gray px-1 py-0.5 rounded text-xs font-mono">claude</code>{" "}
+              without the flag. The course works either way — it just takes more clicks.
+            </p>
+          </Callout>
+        </div>
       </Step>
 
       <Step number={5} title="Verify your setup">
