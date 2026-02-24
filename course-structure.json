@@ -1,0 +1,514 @@
+{
+  "course": "Claude Code for Private Banking",
+  "version": "2.0.0",
+  "fictional_firm": "Claudius Capital",
+  "companion_website": "website/",
+  "paths": {
+    "shared_core": ["module-0", "module-1", "module-2"],
+    "senior_rm": ["module-3a", "module-4a"],
+    "junior_analyst": ["module-3b", "module-4b"],
+    "shared_addon": ["module-5"],
+    "capstone": ["module-6"]
+  },
+  "modules": {
+    "module-0": {
+      "title": "IDE & Course Setup",
+      "description": "Get oriented in the IDE and verify everything works (installation handled by companion website)",
+      "lessons": {
+        "0.1": {
+          "title": "IDE Orientation",
+          "script": "lesson-modules/0.1-ide/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-0-1.md",
+            "branded": ".claude/commands/setup-ide.md"
+          }
+        },
+        "0.2": {
+          "title": "Prerequisites Verification",
+          "script": "lesson-modules/0.2-prerequisites/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-0-2.md",
+            "branded": ".claude/commands/setup-prerequisites.md"
+          }
+        },
+        "0.3": {
+          "title": "Course Overview",
+          "script": "lesson-modules/0.3-overview/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-0-3.md",
+            "branded": ".claude/commands/setup-overview.md"
+          }
+        }
+      }
+    },
+    "module-1": {
+      "title": "Claude Code for Your Daily Work",
+      "description": "Master Claude Code through practical skills, role-specific workflows, and advanced techniques — all set in the Claudius Capital scenario",
+      "sections": {
+        "core_skills": {
+          "title": "Core Skills (Mandatory)",
+          "lessons": ["1.1", "1.2", "1.3a", "1.3b", "1.4", "1.5", "1.6", "1.7", "1.8"]
+        },
+        "role_deep_dives": {
+          "title": "Role Deep-Dives (Recommended)",
+          "lessons": ["1.9", "1.10", "1.11", "1.12", "1.13", "1.14"]
+        },
+        "advanced": {
+          "title": "Advanced Techniques (Optional)",
+          "lessons": ["1.15", "1.16", "1.17", "1.18"]
+        },
+        "reference": {
+          "title": "Troubleshooting & Reference",
+          "lessons": ["1.19", "1.20"]
+        }
+      },
+      "lessons": {
+        "1.1": {
+          "title": "Introduction: Welcome to Claudius Capital",
+          "script": "lesson-modules/1.1-introduction/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-1.md",
+            "branded": ".claude/commands/foundations-intro.md"
+          }
+        },
+        "1.2": {
+          "title": "File Exploration: Finding What Matters in the Mess",
+          "script": "lesson-modules/1.2-file-exploration/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-2.md",
+            "branded": ".claude/commands/foundations-explore.md"
+          }
+        },
+        "1.3a": {
+          "title": "Extract, Synthesise & Create",
+          "script": "lesson-modules/1.3a-extract-synthesise/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-3a.md",
+            "branded": ".claude/commands/foundations-extract.md"
+          }
+        },
+        "1.3b": {
+          "title": "Analyse & Research",
+          "script": "lesson-modules/1.3b-analyse-research/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-3b.md",
+            "branded": ".claude/commands/foundations-analyse.md"
+          }
+        },
+        "1.4": {
+          "title": "Commands & Navigation",
+          "script": "lesson-modules/1.4-commands-navigation/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-4.md",
+            "branded": ".claude/commands/foundations-commands.md"
+          }
+        },
+        "1.5": {
+          "title": "Parallel Processing: Multiple Perspectives at Once",
+          "script": "lesson-modules/1.5-parallel-processing/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-5.md",
+            "branded": ".claude/commands/foundations-parallel.md"
+          }
+        },
+        "1.6": {
+          "title": "Custom Sub-Agents: Your Advisory Board",
+          "script": "lesson-modules/1.6-custom-sub-agents/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-6.md",
+            "branded": ".claude/commands/foundations-agents.md"
+          }
+        },
+        "1.7": {
+          "title": "Project Memory: CLAUDE.md",
+          "script": "lesson-modules/1.7-project-memory/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-7.md",
+            "branded": ".claude/commands/foundations-memory.md"
+          }
+        },
+        "1.8": {
+          "title": "Power Features & AI Verification",
+          "script": "lesson-modules/1.8-power-features/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-8.md",
+            "branded": ".claude/commands/foundations-power.md"
+          }
+        },
+        "1.9": {
+          "title": "The Relationship Manager's Day",
+          "script": "lesson-modules/1.9-rm-day/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-9.md",
+            "branded": ".claude/commands/role-rm.md"
+          }
+        },
+        "1.10": {
+          "title": "The Junior Analyst's Day",
+          "script": "lesson-modules/1.10-analyst-day/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-10.md",
+            "branded": ".claude/commands/role-analyst.md"
+          }
+        },
+        "1.11": {
+          "title": "The Marketing Lead's Day",
+          "script": "lesson-modules/1.11-marketing-day/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-11.md",
+            "branded": ".claude/commands/role-marketing.md"
+          }
+        },
+        "1.12": {
+          "title": "The Manager's Day",
+          "script": "lesson-modules/1.12-manager-day/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-12.md",
+            "branded": ".claude/commands/role-manager.md"
+          }
+        },
+        "1.13": {
+          "title": "The Operations Lead's Day",
+          "script": "lesson-modules/1.13-operations-day/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-13.md",
+            "branded": ".claude/commands/role-operations.md"
+          }
+        },
+        "1.14": {
+          "title": "The Compliance Officer's Day",
+          "script": "lesson-modules/1.14-compliance-day/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-14.md",
+            "branded": ".claude/commands/role-compliance.md"
+          }
+        },
+        "1.15": {
+          "title": "Data, Privacy & Regulatory Awareness",
+          "script": "lesson-modules/1.15-regulatory-awareness/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-15.md",
+            "branded": ".claude/commands/advanced-regulatory.md"
+          }
+        },
+        "1.16": {
+          "title": "Advanced Prompt Engineering for Finance",
+          "script": "lesson-modules/1.16-prompt-engineering/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-16.md",
+            "branded": ".claude/commands/advanced-prompts.md"
+          }
+        },
+        "1.17": {
+          "title": "External Tools & Integrations",
+          "script": "lesson-modules/1.17-integrations/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-17.md",
+            "branded": ".claude/commands/advanced-integrations.md"
+          }
+        },
+        "1.18": {
+          "title": "Building Verification Into Your Workflow",
+          "script": "lesson-modules/1.18-verification/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-18.md",
+            "branded": ".claude/commands/advanced-verification.md"
+          }
+        },
+        "1.19": {
+          "title": "When Things Go Wrong",
+          "script": "lesson-modules/1.19-troubleshooting/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-19.md",
+            "branded": ".claude/commands/reference-troubleshooting.md"
+          }
+        },
+        "1.20": {
+          "title": "Tips, Tricks & Best Practices",
+          "script": "lesson-modules/1.20-tips-best-practices/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-1-20.md",
+            "branded": ".claude/commands/reference-tips.md"
+          }
+        }
+      }
+    },
+    "module-2": {
+      "title": "Build Lab — Client Report Generator",
+      "description": "Build a tool that takes messy portfolio data and generates polished, branded client reports",
+      "type": "build_lab",
+      "lessons": {
+        "2.1": {
+          "title": "Setup",
+          "script": "lesson-modules/2.1-setup/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-2-1.md",
+            "branded": ".claude/commands/build-setup.md"
+          }
+        },
+        "2.2": {
+          "title": "Plan",
+          "script": "lesson-modules/2.2-plan/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-2-2.md",
+            "branded": ".claude/commands/build-plan.md"
+          }
+        },
+        "2.3": {
+          "title": "Build & Iterate",
+          "script": "lesson-modules/2.3-build-iterate/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-2-3.md",
+            "branded": ".claude/commands/build-iterate.md"
+          }
+        },
+        "2.4": {
+          "title": "GitHub",
+          "script": "lesson-modules/2.4-github/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-2-4.md",
+            "branded": ".claude/commands/build-github.md"
+          }
+        },
+        "2.5": {
+          "title": "Go Live",
+          "script": "lesson-modules/2.5-go-live/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-2-5.md",
+            "branded": ".claude/commands/build-go-live.md"
+          }
+        }
+      }
+    },
+    "module-3a": {
+      "title": "Build Lab — Client Meeting Prep Engine",
+      "description": "Build a tool that pulls portfolio data, market context, and talking points into a structured meeting one-pager",
+      "type": "build_lab",
+      "path": "senior_rm",
+      "lessons": {
+        "3a.1": {
+          "title": "Meeting Prep Setup",
+          "script": "lesson-modules/3a.1-meeting-prep-setup/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3a-1.md",
+            "branded": ".claude/commands/rm-meeting-setup.md"
+          }
+        },
+        "3a.2": {
+          "title": "Meeting Prep Plan",
+          "script": "lesson-modules/3a.2-meeting-prep-plan/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3a-2.md",
+            "branded": ".claude/commands/rm-meeting-plan.md"
+          }
+        },
+        "3a.3": {
+          "title": "Meeting Prep Build & Iterate",
+          "script": "lesson-modules/3a.3-meeting-prep-build/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3a-3.md",
+            "branded": ".claude/commands/rm-meeting-build.md"
+          }
+        },
+        "3a.4": {
+          "title": "Meeting Prep — Ship It",
+          "script": "lesson-modules/3a.4-meeting-prep-ship/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3a-4.md",
+            "branded": ".claude/commands/rm-meeting-ship.md"
+          }
+        }
+      }
+    },
+    "module-3b": {
+      "title": "Build Lab — Investment Memo Builder",
+      "description": "Build a tool that takes research notes, fund docs, and meeting minutes and generates structured IC memos",
+      "type": "build_lab",
+      "path": "junior_analyst",
+      "lessons": {
+        "3b.1": {
+          "title": "Memo Builder Setup",
+          "script": "lesson-modules/3b.1-memo-builder-setup/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3b-1.md",
+            "branded": ".claude/commands/analyst-memo-setup.md"
+          }
+        },
+        "3b.2": {
+          "title": "Memo Builder Plan",
+          "script": "lesson-modules/3b.2-memo-builder-plan/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3b-2.md",
+            "branded": ".claude/commands/analyst-memo-plan.md"
+          }
+        },
+        "3b.3": {
+          "title": "Memo Builder Build & Iterate",
+          "script": "lesson-modules/3b.3-memo-builder-build/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3b-3.md",
+            "branded": ".claude/commands/analyst-memo-build.md"
+          }
+        },
+        "3b.4": {
+          "title": "Memo Builder — Ship It",
+          "script": "lesson-modules/3b.4-memo-builder-ship/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-3b-4.md",
+            "branded": ".claude/commands/analyst-memo-ship.md"
+          }
+        }
+      }
+    },
+    "module-4a": {
+      "title": "Build Lab — RFP / Proposal Generator",
+      "description": "Build a tool that takes prospect requirements and generates customized pitch documents",
+      "type": "build_lab",
+      "path": "senior_rm",
+      "lessons": {
+        "4a.1": {
+          "title": "Proposal Generator Setup",
+          "script": "lesson-modules/4a.1-proposal-setup/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4a-1.md",
+            "branded": ".claude/commands/rm-proposal-setup.md"
+          }
+        },
+        "4a.2": {
+          "title": "Proposal Generator Plan",
+          "script": "lesson-modules/4a.2-proposal-plan/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4a-2.md",
+            "branded": ".claude/commands/rm-proposal-plan.md"
+          }
+        },
+        "4a.3": {
+          "title": "Proposal Generator Build & Iterate",
+          "script": "lesson-modules/4a.3-proposal-build/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4a-3.md",
+            "branded": ".claude/commands/rm-proposal-build.md"
+          }
+        },
+        "4a.4": {
+          "title": "Proposal Generator — Ship It",
+          "script": "lesson-modules/4a.4-proposal-ship/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4a-4.md",
+            "branded": ".claude/commands/rm-proposal-ship.md"
+          }
+        }
+      }
+    },
+    "module-4b": {
+      "title": "Build Lab — Compliance Framework Analyzer",
+      "description": "Build a tool that ingests regulatory frameworks and checks processes against them",
+      "type": "build_lab",
+      "path": "junior_analyst",
+      "lessons": {
+        "4b.1": {
+          "title": "Compliance Analyzer Setup",
+          "script": "lesson-modules/4b.1-compliance-setup/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4b-1.md",
+            "branded": ".claude/commands/analyst-compliance-setup.md"
+          }
+        },
+        "4b.2": {
+          "title": "Compliance Analyzer Plan",
+          "script": "lesson-modules/4b.2-compliance-plan/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4b-2.md",
+            "branded": ".claude/commands/analyst-compliance-plan.md"
+          }
+        },
+        "4b.3": {
+          "title": "Compliance Analyzer Build & Iterate",
+          "script": "lesson-modules/4b.3-compliance-build/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4b-3.md",
+            "branded": ".claude/commands/analyst-compliance-build.md"
+          }
+        },
+        "4b.4": {
+          "title": "Compliance Analyzer — Ship It",
+          "script": "lesson-modules/4b.4-compliance-ship/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-4b-4.md",
+            "branded": ".claude/commands/analyst-compliance-ship.md"
+          }
+        }
+      }
+    },
+    "module-5": {
+      "title": "Build Lab — Client Risk Profiler",
+      "description": "Build an interactive assessment that profiles client risk tolerance with structured output",
+      "type": "build_lab",
+      "path": "shared_addon",
+      "lessons": {
+        "5.1": {
+          "title": "Risk Profiler Setup",
+          "script": "lesson-modules/5.1-risk-profiler-setup/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-5-1.md",
+            "branded": ".claude/commands/shared-risk-setup.md"
+          }
+        },
+        "5.2": {
+          "title": "Risk Profiler Plan",
+          "script": "lesson-modules/5.2-risk-profiler-plan/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-5-2.md",
+            "branded": ".claude/commands/shared-risk-plan.md"
+          }
+        },
+        "5.3": {
+          "title": "Risk Profiler Build & Iterate",
+          "script": "lesson-modules/5.3-risk-profiler-build/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-5-3.md",
+            "branded": ".claude/commands/shared-risk-build.md"
+          }
+        },
+        "5.4": {
+          "title": "Risk Profiler — Ship It",
+          "script": "lesson-modules/5.4-risk-profiler-ship/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-5-4.md",
+            "branded": ".claude/commands/shared-risk-ship.md"
+          }
+        }
+      }
+    },
+    "module-6": {
+      "title": "Capstone",
+      "description": "Review your tool portfolio, design your personal workflow, and plan next steps",
+      "lessons": {
+        "6.1": {
+          "title": "Portfolio Review",
+          "script": "lesson-modules/6.1-portfolio-review/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-6-1.md",
+            "branded": ".claude/commands/capstone-review.md"
+          }
+        },
+        "6.2": {
+          "title": "Workflow Design",
+          "script": "lesson-modules/6.2-workflow-design/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-6-2.md",
+            "branded": ".claude/commands/capstone-workflow.md"
+          }
+        },
+        "6.3": {
+          "title": "Next Steps",
+          "script": "lesson-modules/6.3-next-steps/CLAUDE.md",
+          "commands": {
+            "numbered": ".claude/commands/start-6-3.md",
+            "branded": ".claude/commands/capstone-next.md"
+          }
+        }
+      }
+    }
+  }
+}

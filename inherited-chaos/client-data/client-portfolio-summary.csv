@@ -1,0 +1,17 @@
+Client ID,Name,AUM,Currency,Strategy,Risk Profile,Last Review Date,RM Assigned,Status
+CC-001,Van der Berg Family,45200000,EUR,Conservative Multi-Asset,Conservative,15/09/2025,Sophie Laurent,Active
+CC-002,Chen Tech Holdings,28000000,USD,Growth Equity / PE,Aggressive,09/12/2025,Marcus Webb,Active
+CC-003,Al-Rashid Family Trust,120000000,USD,Sharia-Compliant Diversified,Moderate-Conservative,2025-08-22,Sophie Laurent,Active
+CC-004,Hoffman Estate,€18,500,000,EUR,Balanced,Moderate,,Thomas Reiter,Active
+CC-005,Nakamura Holdings,¥3200000000,JPY,International Diversified,Moderate,04/15/2025,Marcus Webb,Active
+CC-006,Bergström Foundation,SEK 285000000,SEK,Impact / ESG Focused,Moderate,2025-11-03,Sophie Laurent,Active
+CC-007,O'Sullivan Trust,12500000,EUR,Fixed Income Plus,Conservative,22/06/2025,Thomas Reiter,Active
+CC-008,Petrova Family Office,$87M,USD,Multi-Strategy,Aggressive,12/01/2025,Marcus Webb,Active
+CC-009,De Luca Partners,31000000,EUR,Real Estate + Alternatives,Moderate-Aggressive,15/10/2025,Sophie Laurent,Active
+CC-010,Williamson & Daughters,44000000,CHF,Wealth Preservation,Conservative,08/30/2025,Thomas Reiter,Active
+CC-011,Fernandez Group,,USD,Growth,Aggressive,2025-07-14,Marcus Webb,Under Review
+CC-012,Ashworth-Patel Family,22400000,GBP,Balanced Global,Moderate,19/11/2025,Sophie Laurent,Active
+CC-013,Johansson Capital,CHF 56000000,CHF,Multi-Asset Absolute Return,Moderate-Aggressive,2025-09-28,,Active
+CC-014,Santos Legacy Trust,15800000,USD,Income & Preservation,,06/20/2025,Thomas Reiter,Dormant
+CC-015,Müller Industriebeteiligungen,67500000,EUR,Concentrated Equity + PE,Aggressive,01/12/2025,Marcus Webb,Active
+CC-016,Kim Family Office,93000000,USD,Global Multi-Strategy,Moderate,, ,Onboarding
