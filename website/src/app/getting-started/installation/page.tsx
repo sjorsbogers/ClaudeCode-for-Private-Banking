@@ -175,20 +175,52 @@ export default function Installation() {
         Download the Course
       </h2>
 
-      <Step number={7} title="Get the course files">
+      <Step number={7} title="Download the course files from GitHub">
         <p className="mb-3">
-          Download the course folder and place it on your Desktop. You
-          should have a folder called{" "}
-          <code className="bg-[var(--bg-subtle)] px-1.5 py-0.5 rounded text-xs font-mono">
-            CC for Private Banking v2
-          </code>{" "}
-          on your Desktop.
+          The course files are hosted on GitHub. You have two options to get them:
         </p>
-        <Callout type="info">
+
+        <p className="text-sm font-medium mb-2">Option A — Download as a ZIP (easiest, no Git required):</p>
+        <ol className="list-decimal list-inside space-y-2 text-sm mb-4">
+          <li>
+            Go to the course repository:{" "}
+            <a
+              href="https://github.com/sjorsbogers/ClaudeCode-for-Private-Banking"
+              className="text-teal hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/sjorsbogers/ClaudeCode-for-Private-Banking
+            </a>
+          </li>
+          <li>Click the green <strong>Code</strong> button</li>
+          <li>Select <strong>Download ZIP</strong></li>
+          <li>Unzip the file and move the folder to your Desktop</li>
+          <li>
+            Rename the folder to{" "}
+            <code className="bg-[var(--bg-subtle)] px-1.5 py-0.5 rounded text-xs font-mono">
+              CC for Private Banking v2
+            </code>
+          </li>
+        </ol>
+
+        <p className="text-sm font-medium mb-2">Option B — Clone with Git (if you have Git installed):</p>
+        <CodeBlock
+          command={'cd ~/Desktop && git clone https://github.com/sjorsbogers/ClaudeCode-for-Private-Banking.git "CC for Private Banking v2"'}
+          label="Run in your terminal"
+        />
+
+        <Callout type="info" title="What you should see">
           <p>
-            Your course instructor will provide the course files. If you
-            don&apos;t have them yet, ask your instructor for the download
-            link.
+            After downloading, you should have a folder called{" "}
+            <code className="bg-warm-gray px-1 py-0.5 rounded text-xs font-mono">
+              CC for Private Banking v2
+            </code>{" "}
+            on your Desktop containing folders like{" "}
+            <code className="bg-warm-gray px-1 py-0.5 rounded text-xs font-mono">lesson-modules</code>,{" "}
+            <code className="bg-warm-gray px-1 py-0.5 rounded text-xs font-mono">company-context</code>, and{" "}
+            <code className="bg-warm-gray px-1 py-0.5 rounded text-xs font-mono">.claude</code>.
+            That&apos;s the course — you&apos;re ready for the next step.
           </p>
         </Callout>
       </Step>

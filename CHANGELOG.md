@@ -1,5 +1,68 @@
 # Changelog — Claude Code for Private Banking
 
+## [2.1.0] — 2026-02-24
+
+### Companion Website — Full Launch
+
+#### Website Architecture
+- Built full 3-column docs layout: fixed sidebar (w-64) + content area + sticky OnThisPage TOC (w-48)
+- Dark mode: CSS custom properties on `:root` / `.dark`, toggled by ThemeToggle, persisted to localStorage, flash-free via inline `<script>` in `<head>`
+- Static export via Next.js 15 + Tailwind CSS 4 (`output: "export"`)
+
+#### New Components
+- `ThemeToggle.tsx` — sun/moon toggle, class-based dark mode on `<html>`
+- `DocLayout.tsx` — 3-column shell used by all module and tools layouts
+- `OnThisPage.tsx` — IntersectionObserver-based sticky TOC, scans `<article>` for h2/h3
+- `LessonCommand.tsx` — slash command callout with copy button
+- `PrevNextNav.tsx` — automatic prev/next navigation using `lessonNav.ts`
+- `src/lib/lessonNav.ts` — flat ordered array of all 54 lesson routes
+
+#### New Pages (63 total)
+- 9 module layout files (module-0 through module-6, getting-started, tools)
+- 51 lesson pages across all modules, content sourced from each lesson's CLAUDE.md
+- 7 tools pages: index + 6 individual tool pages (description, how it works, features, Launch Tool button)
+
+#### Sidebar
+- Expanded from 3 links to full 51-lesson nav with sub-group dividers (Core Skills, Role Deep-Dives, Advanced, Reference)
+- Added "Built Tools" section linking all 6 live tools
+
+#### Navbar
+- Added sticky positioning and ThemeToggle button
+- Added "Download Course" button (teal, GitHub icon) linking to `sjorsbogers/ClaudeCode-for-Private-Banking`
+
+#### Installation Page (Step 7)
+- Replaced vague "ask your instructor" placeholder with two concrete download options:
+  - Option A: GitHub ZIP download (5-step walkthrough, no Git required)
+  - Option B: One-line `git clone` command that names the folder correctly
+  - Confirmation callout describing expected folder contents
+
+#### Deployment
+- Deployed to Vercel: `https://cc-for-private-banking.vercel.app`
+- Removed duplicate alias `website-five-sigma-45.vercel.app`
+- `cc-for-private-banking.vercel.app` registered as permanent project-level domain
+
+### GitHub Repository
+- v2 content (298 files) pushed to `sjorsbogers/ClaudeCode-for-Private-Banking`, replacing v1
+- `.gitignore` added (excludes `node_modules/`, `.next/`, `out/`, `.vercel/`, `organized/*`)
+- `organized/.gitkeep` added to track the student output directory
+- Repo description updated: links to companion website
+- Repo homepage URL set to `https://cc-for-private-banking.vercel.app`
+
+### Built Tools — GitHub & Vercel
+- Created GitHub repos for all tools not yet on GitHub:
+  - `sjorsbogers/claudius-capital` (Claudius Capital Website test)
+  - `sjorsbogers/claudius-capital-v2` (Claudius Capital Website test 2)
+- All 9 Vercel projects connected to their GitHub repos:
+  - `cc-for-private-banking` → `ClaudeCode-for-Private-Banking`
+  - `claudius-report-generator` → `claudius-report-generator-test-run`
+  - `meeting-prep-engine` → `meeting-prep-engine-test-run`
+  - `proposal-generator` → `proposal-generator-black-psi` → `proposal-generator-test-run`
+  - `investment-memo-builder` → `investment-memo-builder-test-run`
+  - `compliance-analyzer` → `compliance-analyzer-test-run`
+  - `risk-profiler` → `risk-profiler-test-run`
+  - `claudius-capital` → `claudius-capital`
+  - `claudius-capital-v2` → `claudius-capital-v2`
+
 ## [2.0.0] — 2026-02-19
 
 ### Complete Rebuild (v1 → v2)
