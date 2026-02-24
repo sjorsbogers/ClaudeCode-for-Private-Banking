@@ -121,8 +121,60 @@ The 4-agent critique methodology is a reusable QA gate for every course built fr
 
 Each agent reviews the full course independently, then findings are synthesized into a prioritized action plan.
 
+## Development Workflow — Local / GitHub / Vercel
+
+This project follows a **GitHub-first deploy model**. Vercel auto-deploys on every push to `main` — no manual `vercel deploy` needed.
+
+### Setup (one-time, already done)
+- GitHub repo: `sjorsbogers/ClaudeCode-for-Private-Banking`
+- Vercel project: `cc-for-private-banking` — connected to GitHub, root directory set to `website/`
+- Vercel auto-deploys the `website/` Next.js app on every push to `main`
+
+### Every session — start here
+```bash
+cd "/Users/sjorsbogers/Desktop/CC for Private Banking v2"
+git pull origin main          # always sync before working
+```
+
+### Making and shipping changes
+```bash
+# 1. Make changes to files in website/src/ or lesson-modules/ etc.
+
+# 2. Verify the website builds before committing
+cd website && npm run build   # must pass with zero errors
+
+# 3. Stage ONLY the files you changed (never git add -A or git add .)
+git add website/src/app/path/to/changed-file.tsx
+git add website/src/components/ChangedComponent.tsx
+
+# 4. Commit with a clear message
+git commit -m "Short description of what changed and why"
+
+# 5. Push — this automatically triggers Vercel to deploy
+git push origin main
+# Vercel picks up the push and rebuilds website/ → live at:
+# https://cc-for-private-banking.vercel.app (usually live in ~1 min)
+```
+
+### What NOT to do
+- **Don't run `vercel deploy --prod --yes`** — GitHub push handles this automatically now
+- **Don't `git add -A` or `git add .`** — stage specific files to avoid committing `.DS_Store`, `.env`, or build artifacts
+- **Don't push without building first** — a failed build on Vercel is harder to debug than catching it locally
+- **Don't commit `website/.next/`, `website/out/`, or `node_modules/`** — already in `.gitignore`
+
+### On Gemini's recommended practices — what applies here
+| Practice | Verdict | Notes |
+|----------|---------|-------|
+| Commit often | ✅ Yes | After every logical change, not just big features |
+| Selective staging | ✅ Yes | Always `git add [specific files]`, never `git add -A` |
+| Sync before starting (`git pull`) | ✅ Yes | First command of every session |
+| Maintain CLAUDE.md | ✅ Yes | Already done — this file |
+| Branching / PRs | ⚠️ Optional | Solo project: main branch is fine for content updates. Use a branch only for large structural changes where you want a rollback point |
+| `/install-github-app` (Claude GitHub Actions) | ❌ Not needed | That feature lets Claude work on GitHub issues via CI. Overkill for a course content project — we work locally and push |
+
 ## Recent Changes
 <!-- Keep last ~5 entries here for quick Claude context. Full history in CHANGELOG.md -->
+- **2026-02-24** — v2.1.0: Full website launch (66 pages, all 51 lessons), dark mode, 3-column layout, Tools section, Download button, Installation Step 7 rewritten, `--dangerously-skip-permissions` added to First Session + Module 1.1, Vercel root dir fixed to `website/` (GitHub auto-deploy now works), all Vercel projects connected to GitHub repos.
 - **2026-02-19** — v2 complete rebuild. Module 1 expanded (9→20 lessons), companion website added, 7 new chaos files, Reality Check pattern, merged Ship It lessons, capstone module, dynamic compliance checkpoints, 102 slash commands, strengthened sub-agents.
 - **2026-02-11** — v1 Beta 1 Realism Audit: 14-workstream overhaul based on 4-agent industry critique.
 - **2026-02-10** — v1 Initial project creation.
