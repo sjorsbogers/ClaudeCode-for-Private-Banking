@@ -1,4 +1,6 @@
 import LessonCommand from "@/components/LessonCommand";
+import CodeBlock from "@/components/CodeBlock";
+import Callout from "@/components/Callout";
 import PrevNextNav from "@/components/PrevNextNav";
 
 export default function IntroductionPage() {
@@ -13,6 +15,59 @@ export default function IntroductionPage() {
       </p>
 
       <LessonCommand numbered="/start-1-1" branded="/foundations-intro" />
+
+      <div className="mt-8 mb-8 border border-[var(--border)] rounded-xl p-6">
+        <h2 className="text-lg font-semibold mb-2" id="skip-permissions">
+          Recommended: Run Claude Code without permission prompts
+        </h2>
+        <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-4">
+          By default, Claude Code pauses and asks for your approval every time it wants to create a
+          file, edit code, or run a command. During this course that adds up to a lot of
+          confirmation clicks. We recommend restarting Claude Code with the{" "}
+          <code className="bg-[var(--bg-subtle)] px-1.5 py-0.5 rounded text-xs font-mono">
+            --dangerously-skip-permissions
+          </code>{" "}
+          flag so it can work uninterrupted.
+        </p>
+
+        <p className="text-sm font-medium mb-2">Step 1 — Exit your current Claude Code session:</p>
+        <CodeBlock command="exit" label="Type in the Claude Code prompt" />
+        <p className="text-[var(--text-muted)] text-xs mb-4">
+          Alternatively, press <strong>Ctrl+C</strong> twice to force-quit.
+        </p>
+
+        <p className="text-sm font-medium mb-2">Step 2 — Reopen Claude Code with the flag:</p>
+        <CodeBlock command="claude --dangerously-skip-permissions" label="Type in your terminal" />
+
+        <p className="text-[var(--text-muted)] text-sm mb-4">
+          Once it starts up, run the slash command above to resume Lesson 1.1.
+        </p>
+
+        <Callout type="warning" title="Understand what this flag does">
+          <p className="mb-2">
+            This flag removes the confirmation step before every action. That means Claude Code can
+            read, create, edit, and delete files — and run terminal commands — without pausing to
+            ask you first.
+          </p>
+          <ul className="list-disc list-inside space-y-1 text-sm">
+            <li>Claude could modify or overwrite files without warning</li>
+            <li>Any terminal commands it runs will execute immediately</li>
+            <li>
+              <strong>Never use this flag outside a safe, contained folder</strong> — not on your
+              main projects, not on production systems, not anywhere sensitive
+            </li>
+            <li>
+              The course folder on your Desktop is a safe sandbox — nothing here connects to live
+              client data or external systems
+            </li>
+          </ul>
+          <p className="mt-2 text-sm">
+            If you prefer to stay in control and approve each action, just use{" "}
+            <code className="bg-warm-gray px-1 py-0.5 rounded text-xs font-mono">claude</code>{" "}
+            without the flag. The course works either way — it just takes more clicks.
+          </p>
+        </Callout>
+      </div>
 
       <h2 className="text-xl font-semibold mb-4 mt-8" id="what-youll-cover">
         What You&apos;ll Cover
